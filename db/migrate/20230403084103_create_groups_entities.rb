@@ -8,5 +8,6 @@ class CreateGroupsEntities < ActiveRecord::Migration[7.0]
 
       t.timestamps
     end
+    add_index :groups_entities, [:group_id, :entity_id]
   end
 end

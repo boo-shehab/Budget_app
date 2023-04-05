@@ -1,0 +1,21 @@
+
+<h1>New transaction</h1>
+<%= form_with(model: @entity, url: category_transactions_path(@group)) do |form| %>
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :amount %>
+    <%= form.text_field :amount %>
+  </div>
+  <div class="field">
+  <%= form.label :group_id %>
+  <%= form.collection_select :group_id, @groups, :id, :name,{},{value: @group.id} %>
+</div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

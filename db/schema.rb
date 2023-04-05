@@ -40,6 +40,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_04_152225) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["entity_id"], name: "index_groups_entities_on_entity_id"
+    t.index ["group_id", "entity_id"], name: "index_groups_entities_on_group_id_and_entity_id"
     t.index ["group_id"], name: "index_groups_entities_on_group_id"
   end
 

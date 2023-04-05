@@ -1,6 +1,6 @@
 class Entity < ApplicationRecord
   belongs_to :author, class_name: 'User'
-  belongs_to :group
+  has_many :groups, dependent: :destroy
   validates :name, presence: true, length: { maximum: 50 }
   validates :amount, presence: true, numericality: { only_integer: true }
 end

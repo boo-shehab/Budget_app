@@ -1,0 +1,18 @@
+<header>Category</header>
+
+<main>
+    <div>
+        <img src = <%= @group.icon%> alt = 'icon'>
+        <h2><%= @group.name %></h2>
+        <p><%= @group.total %></p>
+        <p><%= @group.created_at%></p>
+    </div>
+    <%= link_to "add Transaction", new_category_transaction_path(@group.id) %>
+    <% @entities.each do |entity|%>
+        <div>
+            <h2><%= entity.name %></h2>
+            <p><%= entity.amount %></p>
+        </div>
+    <%end%>
+
+</main>

@@ -10,7 +10,9 @@ Rails.application.routes.draw do
   end
   authenticated :user do
     root 'categories#index', as: :root 
-    resources :categories, only: [:index, :new, :create]
+    resources :categories, only: [:show, :new, :create] do
+      resources :transactions, only: [:index, :new, :create, :update, :show, :destory]
+    end
   end
 
   unauthenticated :user do
