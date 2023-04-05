@@ -9,11 +9,11 @@ Rails.application.routes.draw do
     get '/users/sign_out' => 'devise/sessions#destroy'
   end
   authenticated :user do
-    root 'categories#index', as: :root #-> if user is logged in
-    # resources :user, only: [:edit, :update, :show, :destory] #-> ONLY available for logged in users
+    root 'categories#index', as: :root 
+    resources :categories, only: [:index, :new, :create]
   end
 
   unauthenticated :user do
-    root 'splash_screen#home', as: :unauthenticated #-> if user is not logged in
+    root 'splash_screen#home', as: :unauthenticated 
   end
 end

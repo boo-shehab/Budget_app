@@ -1,6 +1,6 @@
 class Group < ApplicationRecord
-  belongs_to :users, class_name: 'User'
-  has_many :entities, class_name: 'Entity'
+  belongs_to :user
+  has_many :entities, dependent: :destroy
 
   validates :name, presence: true, length: { maximum: 50 }
   validates :icon, presence: true
