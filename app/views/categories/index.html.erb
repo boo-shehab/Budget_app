@@ -1,15 +1,29 @@
-<header>
-    <h1>Categories</h1>
-</header>
-<main>
+
+<nav class="navbar bg-primary text-center" data-bs-theme="dark">
+    <%= link_to "Sign out", destroy_user_session_path, :method => :delete, class: 'navbar-nav fs-3 text-decoration-none' %>
+    <h1 class= "navbar-nav mx-auto">Categories</h1>
+</nav>
+<main class="container">
     <% @group.each do |item|%>
-        <div>
-            <img src = <%= item.icon%> alt = 'icon'>
-            <h2><%= link_to item.name, category_path(item.id) %></h2>
-            <p><%= item.total %></p>
-            <p><%= item.created_at%></p>
+        <div class="card mb-3 d-flex mx-auto" style="max-width: 540px;">
+    <div class="row g-0 align-items-center">
+      <div class="col-4 h-100">
+        <img src=<%= item.icon%> class="img-fluid rounded-start w-100" alt="...">
+      </div>
+      <div class="col-8">
+        <div class="card-body">
+          <h5 class="card-title d-flex justify-content-between">
+            <%= link_to item.name, category_path(item.id) %>
+            <p>$<%= item.total %></p>
+          </h5>
+          <p class="card-text"><small class="text-body-secondary"><%= item.created_at%></small></p>
         </div>
+      </div>
+    </div>
+  </div>
+
     <%end%>
+    <div class="text-center">
+        <%= link_to "new category", new_category_path, :method => :delete, class: "btn btn-primary" %>
+    </div>
 </main>
-<%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
-<%= link_to "new category", new_category_path, :method => :delete %>

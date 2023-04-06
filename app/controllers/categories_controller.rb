@@ -1,6 +1,6 @@
 class CategoriesController < ApplicationController
   def index
-    @group = current_user.groups
+    @group = current_user.groups.order("created_at DESC")
   end
 
   def show
