@@ -5,7 +5,6 @@ RSpec.describe 'Food Index', type: :system do
     @user = User.create(name: 'anye3', email: 'ahmed200@gmail.com', password: '123456',
                         password_confirmation: '123456')
     @user.confirm
-
   end
 
   it 'Sign up with a user' do
@@ -37,5 +36,4 @@ RSpec.describe 'Food Index', type: :system do
 
     expect(current_path).to eq(root_path)
   end
-
 end

@@ -1,11 +1,11 @@
 class CategoriesController < ApplicationController
   def index
-    @group = current_user.groups.order("created_at DESC")
+    @group = current_user.groups.order('created_at DESC')
   end
 
   def show
     @group = current_user.groups.find(params[:id])
-    @entities = @group.entities.order("created_at DESC")
+    @entities = @group.entities.order('created_at DESC')
   end
 
   def new
