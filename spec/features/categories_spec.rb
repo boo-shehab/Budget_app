@@ -4,7 +4,6 @@ RSpec.describe 'Food Index', type: :system do
   before(:each) do
     @user = User.create(name: 'anye3', email: 'ahmed200@gmail.com', password: '123456',
                         password_confirmation: '123456')
-    @user.confirm
   end
 
   it 'Sign up with a user' do
