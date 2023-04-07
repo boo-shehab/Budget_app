@@ -1,0 +1,21 @@
+<nav class="navbar bg-primary text-center" data-bs-theme="dark">
+    <%= link_to "Sign out", destroy_user_session_path, :method => :delete, class: 'navbar-nav fs-3 text-decoration-none' %>
+    <h1 class= "navbar-nav mx-auto">new Categories</h1>
+    <%= link_to ">", root_path, :method => :delete, class: 'navbar-nav fs-1 text-decoration-none' %>
+</nav>
+<%= form_with(model: @group, url: categories_path, class: "my-3") do |form| %>
+  <div class="mb-3">
+    <%= form.label :name, class: "form-label" %>
+    <%= form.text_field :name, class: "form-control" %>
+  </div>
+
+  <div class="mb-3">
+    <%= form.label :icon, class: "form-label" %>
+    <%= form.text_field :icon, class: "form-control" %>
+  </div>
+
+  <div class="d-grid gap-2">
+    <%= form.submit "Submit", class: "btn btn-primary" %>
+  </div>
+<% end %>
+
