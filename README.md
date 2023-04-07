@@ -57,8 +57,6 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-> not yet
-
 - [Live Demo Link](https://budget-tg5y.onrender.com/)
 
 ## Project Presentation 
