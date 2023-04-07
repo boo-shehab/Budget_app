@@ -176,8 +176,8 @@ If you like this project, please give a ⭐
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I would like to thank  Gregoire Vella on Behance.
-## Original design idea by Gregoire Vella on Behance.
+[Gregoire Vella](https://www.behance.net/gallery/19759151/Snapscan-iOs-design-and-branding?tracking_source=) for the original design idea on Behance.
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
