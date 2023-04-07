@@ -61,7 +61,7 @@
 
 - [Live Demo Link](https://budget-tg5y.onrender.com/)
 
-## Project documentation 
+## Project Presentation 
 - [project documentation](https://www.loom.com/share/3c2d574b3bbe46719fe25e1a6ff83750)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
